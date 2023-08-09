@@ -4,13 +4,13 @@
 
 root-title=Git repository browser
 root-desc=a fast webinterface for the git dscm
-#root-readme=$CGIT_README
+root-readme=/usr/share/webapps/cgit/about.html
 
 # Default Theme
-css=/cgit.css
-js=/cgit.js
-logo=/cgit.png
-favicon=/favicon.ico
+css=/static/cgit.css
+js=/static/cgit.js
+logo=/static/cgit.png
+favicon=/static/favicon.ico
 
 ##
 ## Filters
@@ -19,10 +19,10 @@ favicon=/favicon.ico
 ##   - Email: Adds libravatar(gravatar) images based on Emails
 ##   - Source: Apply syntax highlighting
 ##
-about-filter=/usr/local/lib/cgit/filters/about-formatting.sh
-commit-filter=/usr/local/lib/cgit/filters/commit-links.sh
-email-filter=lua:/usr/local/lib/cgit/filters/email-libravatar.lua
-source-filter=/usr/local/lib/cgit/filters/syntax-highlighting.py
+about-filter=/usr/lib/cgit/filters/about-formatting.sh
+commit-filter=/usr/lib/cgit/filters/commit-links.sh
+email-filter=lua:/usr/lib/cgit/filters/email-libravatar.lua
+source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
 
 
 ##
