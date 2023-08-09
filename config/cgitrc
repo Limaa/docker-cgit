@@ -2,14 +2,15 @@
 # cgit config
 # see cgitrc(5) for details
 
-#root-title=$CGIT_TITLE
-#root-desc=$CGIT_DESC
+root-title=Git repository browser
+root-desc=a fast webinterface for the git dscm
 #root-readme=$CGIT_README
 
 # Default Theme
-#css=/cgit.css
-#logo=/cgit.png
-#favicon=/favicon.ico
+css=/cgit.css
+js=/cgit.js
+logo=/cgit.png
+favicon=/favicon.ico
 
 ##
 ## Filters
@@ -69,32 +70,32 @@ readme=:install.txt
 readme=:INSTALL
 readme=:install
 
-
-# Cache
-#cache-root=/var/cache/cgit
-#cache-size=1000
+##
+## Cache
+##
+cache-root=/var/cache/cgit
+cache-size=1000
 
 enable-http-clone=0
 
-# GUI options
+##
+## GUI options
+##
 enable-blame=1
 enable-commit-graph=1
 enable-index-owner=1
 enable-log-filecount=1
 enable-log-linecount=1
-
 remove-suffix=1
 
+##
+## Snapshots
+##
 snapshots=tar.gz tar.bz2 tar.xz zip
 
-#robots=noindex, nofollow
-
-#virtual-root=$CGIT_VROOT
+##
+## Config options
+##
 virtual-root=/
-
-# Sections
-#section-from-path=$CGIT_SECTIONS_FROM_STARTPATH
 section-from-path=1
-
-#scan-path=$CGIT_SCAN_PATH
 scan-path=/git

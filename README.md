@@ -1,4 +1,4 @@
-# CGIT docker container
+# CGIT docker
 
 [cgit](https://git.zx2c4.com/cgit/about/) docker container using:
 - nginx
@@ -7,22 +7,20 @@
 
 Scans and displays every repository under `/git`
 
+## Usage
 
-## Develop
-### Build
 ```sh
-# Docker
-make build
-# Podman
-make DOCKER=podman build
+docker run -d -p 8080:80 \
+    --name cgit \
+    -v /opt/git:/git \
+    limaa/docker-cgit
 ```
 
-### Run
-```sh
-make run
-# Podman
-make DOCKER=podman run
-```
+In the above example, the local `/opt/git` folder is used as `/git` by the container and the HTTP port is mapped to `8080` on the host.
+
+### Custom nginx configuration
+
+TODO
 
 ## References
 ### General
